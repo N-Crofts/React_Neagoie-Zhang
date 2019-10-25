@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Crunk 'till you die.
-        </p>
-        <a
-          className="App-link"
-          href="https://www.nicholascrofts.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gimme Money
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      string: 'Cool Cool'
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>{this.state.string}</p>
+          <button onClick={() => this.setState({ string: 'Tight Tight' })}>Change Text</button>
+        </header>
+      </div>
+    )
+  }
 }
 
 export default App;
