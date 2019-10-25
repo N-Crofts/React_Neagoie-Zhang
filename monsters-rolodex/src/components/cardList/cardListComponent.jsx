@@ -1,11 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './cardListStyles.css'
 
-export default class cardListComponent extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+export const CardList = (props) => {
+  return (
+    <div className='cardList'>{props.children}</div>
+  )
 }
